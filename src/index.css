@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.wrap-two-line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+@layer components {
+    .container {
+      @apply md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px];
+    }
+}
+
+@layer base {
+  img {
+    @apply h-full object-cover
+  }
+}
