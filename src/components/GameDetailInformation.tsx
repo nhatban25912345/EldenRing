@@ -1,9 +1,9 @@
 function GameDetailInformation() {
   return (
-    <div className="mx-5 flex w-full flex-col pb-[72px] lg:pb-10">
+    <div className="mx-2 flex w-full flex-col pb-16 sm:mx-5 lg:pb-[72px]">
       <div className="w-full rounded-[20px] bg-[#f6f6f6]">
-        <div className="flex flex-col py-7 sm:container md:flex-row md:justify-between md:py-[56px]">
-          <div className="flex w-full max-w-[357px] flex-col md:mr-[50px] md:w-1/2">
+        <div className="container flex flex-col py-7 md:flex-row md:justify-between md:py-[56px]">
+          <div className="flex w-full flex-col md:mr-[50px] md:w-1/2 md:max-w-[357px]">
             <div className="relative w-full">
               <div className="py-4 md:pb-7">
                 <div className="text-lg font-semibold">Release date</div>
@@ -29,7 +29,7 @@ function GameDetailInformation() {
             </div>
           </div>
 
-          <div className="flex w-full max-w-[357px] flex-col md:mr-[50px] md:w-1/2">
+          <div className="flex w-full flex-col md:mr-[50px] md:w-1/2 md:max-w-[357px]">
             <div className="relative w-full">
               <div className="py-4 md:pb-7">
                 <div className="text-lg font-semibold">Platform</div>
@@ -42,7 +42,7 @@ function GameDetailInformation() {
             <div className="relative w-full">
               <div className="py-4 md:pb-7">
                 <div className="text-lg font-semibold">Subtitles</div>
-                <div className="text-[#737373]">English, Thai</div>
+                <div className="text-[#737373]">English, German, Italian</div>
               </div>
               <div className="absolute bottom-0 left-0 h-[1px] w-full bg-[#ddd]"></div>
             </div>
@@ -56,7 +56,7 @@ function GameDetailInformation() {
           </div>
         </div>
       </div>
-      <div className="container mt-[30px]">
+      <div className="container mt-5 text-sm sm:mt-[30px] sm:text-base">
         ELDEN RING™& ©Bandai Namco Entertainment Inc. / ©2023 FromSoftware,
         Inc.
       </div>

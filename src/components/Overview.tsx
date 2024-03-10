@@ -4,10 +4,10 @@ function Overview() {
   return (
     <div className="w-full">
       <div className="container py-10 pt-14">
-        <h2 className="px-[76px] text-[46px]/[54px] font-bold">
+        <h2 className="title lg:px-[76px]">
           Created by Hidetaka Miyazaki and George R. R. Martin
         </h2>
-        <div className="my-10 w-full">
+        <div className="my-4 w-full sm:my-10">
           <img
             className="h-full w-full rounded-[20px] object-cover"
             src={banner}

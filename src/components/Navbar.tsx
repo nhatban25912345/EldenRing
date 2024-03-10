@@ -11,23 +11,23 @@ function Navbar() {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <div className="absolute z-10 flex w-full items-center justify-between px-[120px] text-[#e3ca8e] ">
-      <img className="h-20" src={logo} alt="logo" />
+    <div className="absolute z-10 flex w-full flex-col items-center justify-center px-10 text-[#e3ca8e] sm:flex-row sm:justify-between lg:px-[120px] ">
+      <img className="h-16 sm:h-20" src={logo} alt="logo" />
       <ul className=" hidden w-[600px] items-center justify-between lg:flex">
-        <li className="translate-all cursor-pointer duration-300 hover:text-[#b89543]">
-          MAIN
+        <li className="translate-all cursor-pointer uppercase duration-300 hover:text-[#b89543]">
+          Main
         </li>
-        <li className="translate-all cursor-pointer duration-300 hover:text-[#b89543]">
-          ABOUT
+        <li className="translate-all cursor-pointer uppercase duration-300 hover:text-[#b89543]">
+          Key features
         </li>
-        <li className="translate-all cursor-pointer duration-300 hover:text-[#b89543]">
-          GAME FEATURES
+        <li className="translate-all cursor-pointer uppercase duration-300 hover:text-[#b89543]">
+          Characters
         </li>
-        <li className="translate-all cursor-pointer duration-300 hover:text-[#b89543]">
-          SYSTEM REQUIREMENTS
+        <li className="translate-all cursor-pointer uppercase duration-300 hover:text-[#b89543]">
+          Media gallery
         </li>
-        <li className="translate-all cursor-pointer duration-300 hover:text-[#b89543]">
-          QUOTES
+        <li className="translate-all cursor-pointer uppercase duration-300 hover:text-[#b89543]">
+          Purchase
         </li>
       </ul>
       <div className="flex items-center">

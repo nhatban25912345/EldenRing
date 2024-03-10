@@ -12,9 +12,17 @@ function AnimationGallery() {
   const { height, width } = useWindowDimensions();
   const mainArtWidth = width * 0.5742;
   const mainArtHeight = height * 0.7;
+
+  // const elementRef = useRef(null);
+  // useRef(() => {
+  //   // const rect = elementRef.current.getBoundingClientRect();
+  //   // console.log(elementRef);
+  //   console.log(11);
+  // }, [])
+
   return (
-    <div className="relative flex w-full flex-col">
-      <div className="flex h-screen w-full items-end justify-center">
+    <div className="flex w-full flex-col ">
+      <div className="relative flex h-screen w-full items-end justify-center">
         {/* left block */}
         <div
           className="absolute left-0 top-0 z-[2] "
@@ -74,10 +82,14 @@ function AnimationGallery() {
         </div>
         {/* middle block */}
         <div
-          className="relative overflow-hidden rounded-[20px]"
+          className="absolute overflow-hidden rounded-[20px]"
           style={{ width: mainArtWidth, height: mainArtHeight }}
         >
-          <img src={imgMain} alt="game-art" />
+          <img
+            // className="absolute -left-20 top-0 z-20"
+            src={imgMain}
+            alt="game-art"
+          />
         </div>
         {/* right block */}
         <div

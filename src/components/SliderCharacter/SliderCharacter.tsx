@@ -15,6 +15,7 @@ import leftArrow from "../../../public/icons/arrow-chevron-left.svg";
 import rightArrow from "../../../public/icons/arrow-chevron-right.svg";
 // import { createUseStyles } from "react-jss";
 import "./SliderCharacter.css";
+import useWindowDimensions from "../../Hooks/useWindowDimensions ";
 
 function SliderCharacter() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -22,17 +23,30 @@ function SliderCharacter() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [pageCounter, setPageCounter] = useState(10);
   const sliderRef = useRef<Slider>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { height, width } = useWindowDimensions();
+
   useEffect(() => {
+    const paddingLeft =
+      width > 1200
+        ? (width - 1200) / 2
+        : width > 992
+          ? (width - 992) / 2
+          : width > 720
+            ? (width - 720) / 2
+            : //   : width > 576
+              //     ? (width - 576) / 2
+              10;
+
     if (
       sliderRef.current &&
       sliderRef.current.innerSlider &&
       sliderRef.current.innerSlider.list
     ) {
-      sliderRef.current.innerSlider.list.style.paddingLeft = "200px";
+      sliderRef.current.innerSlider.list.style.paddingLeft = `${paddingLeft}px`;
       // setPageCounter(
       //   sliderRef.current?.innerSlider?.track.node.childNodes.length,
       // );
-
       // Object.values(sliderRef.current?.innerSlider?.track.node.childNodes).map(
       //   // eslint-disable-next-line @typescript-eslint/no-explicit-any
       //   (index: any, key: number) => {
@@ -42,7 +56,7 @@ function SliderCharacter() {
       //   },
       // );
     }
-  }, [sliderRef]);
+  }, [sliderRef, width]);
 
   const handlePrevSlide = () => {
     sliderRef.current?.slickPrev();
@@ -69,6 +83,24 @@ function SliderCharacter() {
     slidesToShow: 4,
     slidesToScroll: 1,
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+    ],
     // swipeToSlide: true,
     // afterChange: function (index: number) {
     //   console.log(
@@ -94,24 +126,22 @@ function SliderCharacter() {
   ];
 
   return (
-    <div className="mb-[100px] max-w-full bg-[#F4F6F8] py-[72px] lg:py-10">
-      <div className="container flex flex-row items-center justify-between">
-        <div className="text-4xl font-semibold tracking-[-0.8px] text-[#1E1E1E]">
-          Characters
-        </div>
+    <div  className="max-w-full bg-[#F4F6F8] py-[72px] translate-x-0 duration-300 lg:py-10">
+      <div className="container flex w-full flex-row items-center justify-between">
+        <div className="second-title tracking-[-0.8px] ">Characters</div>
         <div className="flex items-center ">
           <span className="font-semibold" style={{ display: "none" }}>
             {currentSlideNumber} of {pageCounter}
           </span>
-          <div className="ml-12 flex flex-row gap-4">
+          <div className="ml-2 flex flex-row gap-4 sm:ml-12">
             <div
-              className="flex h-16 w-16 cursor-pointer select-none items-center justify-center rounded-full bg-black/[0.015]"
+              className="flex h-4 w-4 cursor-pointer select-none items-center justify-center rounded-full bg-black/[0.015] sm:h-16 sm:w-16"
               onClick={handlePrevSlide}
             >
               <img className="h-4 w-4 text-2xl" src={leftArrow} alt="" />
             </div>
             <div
-              className="flex h-16 w-16 cursor-pointer select-none items-center justify-center rounded-full bg-black/[0.015]"
+              className="flex h-4 w-4 cursor-pointer select-none items-center justify-center rounded-full bg-black/[0.015] sm:h-16 sm:w-16"
               onClick={handleNextSlide}
             >
               <img className="h-4 w-4 text-2xl" src={rightArrow} alt="" />
@@ -132,11 +162,11 @@ function SliderCharacter() {
           ))}
         </Slider>
       </SliderWrap>
-      <div className="container mt-5 flex flex-col items-center lg:flex-row">
-        <div className="mb-2 w-full max-w-full text-[32px] font-semibold tracking-[-0.8px] text-[#1E1E1E] md:mb-6 lg:max-w-[42%]">
+      <div className="container mt-5 flex flex-col lg:flex-row lg:items-center">
+        <div className="third-title mb-2 w-full max-w-full tracking-[-0.8px] md:mb-6 lg:max-w-[42%]">
           Warrior
         </div>
-        <div className="flex max-w-full items-center lg:max-w-[58%]">
+        <div className="flex max-w-full items-center text-[#737373] lg:max-w-[58%]">
           A nomad warrior who fights wielding two blades at once.
           <br />
           An origin of exceptional technique.
@@ -147,41 +177,3 @@ function SliderCharacter() {
 }
 
 export default SliderCharacter;
-
-//   <Swiper
-//     slidesPerView={4.4}
-//     spaceBetween={20}
-//     pagination={{
-//       clickable: true,
-//     }}
-//     modules={[Pagination]}
-//     className="mySwiper"
-//   >
-//     <SwiperSlide className="ml-[200px]">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//     <SwiperSlide className="">
-//       <div className="h-[450px] bg-black/80"></div>
-//     </SwiperSlide>
-//   </Swiper>
