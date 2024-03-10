@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 import Warrior from "../../../public/imgs/elden-ring-character-warrior-full-new.webp";
@@ -18,13 +18,12 @@ import "./SliderCharacter.css";
 import useWindowDimensions from "../../Hooks/useWindowDimensions ";
 
 function SliderCharacter() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentSlideNumber, setCurrentSlideNumber] = useState(1);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [pageCounter, setPageCounter] = useState(10);
+  // const [currentSlideNumber, setCurrentSlideNumber] = useState(1);
+  // const [pageCounter, setPageCounter] = useState(10);
+  const pageCounter = 10;
+  const currentSlideNumber = 1;
   const sliderRef = useRef<Slider>(null);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     const paddingLeft =
@@ -126,7 +125,7 @@ function SliderCharacter() {
   ];
 
   return (
-    <div  className="max-w-full bg-[#F4F6F8] py-[72px] translate-x-0 duration-300 lg:py-10">
+    <div className="max-w-full translate-x-0 bg-[#F4F6F8] py-[72px] duration-300 lg:py-10">
       <div className="container flex w-full flex-row items-center justify-between">
         <div className="second-title tracking-[-0.8px] ">Characters</div>
         <div className="flex items-center ">

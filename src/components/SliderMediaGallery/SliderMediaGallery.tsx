@@ -9,10 +9,15 @@ import SliderMediaGallery6 from "../../../public/imgs/SliderMediaGallery6.webp";
 import PlayIcon from "../../../public/icons/play.svg";
 
 function SliderMediaGallery() {
-  const [nav1, setNav1] = useState(null);
-  const [nav2, setNav2] = useState(null);
-  let sliderRef1 = useRef(null);
-  let sliderRef2 = useRef(null);
+  const [nav1, setNav1] = useState<Slider | null>(null);
+  const [nav2, setNav2] = useState<Slider | null>(null);
+  const sliderRef1 = useRef<Slider | null>(null);
+  const sliderRef2 = useRef<Slider | null>(null);
+
+  useEffect(() => {
+    setNav1(sliderRef1.current);
+    setNav2(sliderRef2.current);
+  }, []);
 
   const mediaGalleryVideoSrcs = [
     "https://www.youtube.com/embed/a8k8R0Q2ubY?si=a-HLB2k3_fxXluq-",
@@ -31,11 +36,6 @@ function SliderMediaGallery() {
     SliderMediaGallery5,
     SliderMediaGallery6,
   ];
-
-  useEffect(() => {
-    setNav1(sliderRef1);
-    setNav2(sliderRef2);
-  }, []);
 
   const setting1 = {
     slicesToShow: 1,
@@ -102,9 +102,9 @@ function SliderMediaGallery() {
       </div>
       <div className="slider-container w-full overflow-x-hidden">
         <Slider
-          asNavFor={nav2}
+          asNavFor={nav2!}
           arrows={false}
-          ref={(slider) => (sliderRef1 = slider)}
+          ref={(slider) => (sliderRef1.current = slider)}
           {...setting1}
         >
           {mediaGalleryVideoSrcs.map((src) => (
@@ -127,9 +127,9 @@ function SliderMediaGallery() {
         <div className="ml-[20px] py-5">
           <h4 className="ml-1 py-2 font-semibold">Media gallery</h4>
           <Slider
-            asNavFor={nav1}
+            asNavFor={nav1!}
             arrows={false}
-            ref={(slider) => (sliderRef2 = slider)}
+            ref={(slider) => (sliderRef2.current = slider)}
             {...setting2}
           >
             {mediaGalleryThumbnailSrcs.map((imageSrc) => (
