@@ -61,18 +61,14 @@ function KeyFeatures() {
         </div>
 
         <div className="container mb-[82px] flex flex-wrap justify-center lg:mb-[86px] lg:flex-row-reverse lg:flex-nowrap lg:justify-start ">
-          <div
-            className="w-full max-w-[451px]"
-            style={{
-              maskImage: `url(${keyFeatureMask})`,
-            }}
-          >
+          <div className="w-full max-w-[451px]">
             <div
               className="mx-auto aspect-[0.72832] w-full max-w-[335px] bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${keyFeature3})`,
                 maskSize: "100%",
                 maskImage: `url(${keyFeatureMask})`,
+                borderRadius: "20px",
                 maskRepeat: "no-repeat",
                 maskPosition: "center center",
               }}
