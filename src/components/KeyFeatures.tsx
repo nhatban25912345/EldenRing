@@ -61,7 +61,12 @@ function KeyFeatures() {
         </div>
 
         <div className="container mb-[82px] flex flex-wrap justify-center lg:mb-[86px] lg:flex-row-reverse lg:flex-nowrap lg:justify-start ">
-          <div className="w-full max-w-[451px]">
+          <div
+            className="w-full max-w-[451px]"
+            style={{
+              maskImage: `url(${keyFeatureMask})`,
+            }}
+          >
             <div
               className="mx-auto aspect-[0.72832] w-full max-w-[335px] bg-cover bg-center bg-no-repeat"
               style={{
@@ -81,7 +86,7 @@ function KeyFeatures() {
               weapons, magical abilities, and skills found throughout the world.
               Charge into battle, pick off enemies one-by-one using stealth, or
               even call upon allies for aid. Many options are at your disposal
-              as you decide how to approach exploration and combat. $
+              as you decide how to approach exploration and combat.
             </p>
           </div>
         </div>
