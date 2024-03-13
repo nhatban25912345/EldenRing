@@ -6,6 +6,7 @@ import keyFeatureMask from "../../public/icons/key-feature-mask.svg";
 import imgMain from "../../public/imgs/Elden_Ring_Multi2.webp";
 
 function KeyFeatures() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   // const { height, width } = useWindowDimensions();
   return (
     <div className="flex w-full flex-wrap">
@@ -64,6 +65,7 @@ function KeyFeatures() {
             <div
               className="mx-auto aspect-[0.72832] w-full max-w-[335px] bg-cover bg-center bg-no-repeat"
               style={{
+                // maskImage: `url("../../public/icons/key feature mask.svg")`,
                 maskImage: `url(${keyFeatureMask})`,
                 backgroundImage: `url(${keyFeature3})`,
                 maskSize: "100%",
