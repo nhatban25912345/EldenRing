@@ -1,11 +1,10 @@
 // import useWindowDimensions from "../Hooks/useWindowDimensions ";
 // import AnimationGallery from "./AnimationGallery";
 import keyFeature2 from "../../public/imgs/elden-ring-key-feature-2.jpeg";
-// import keyFeature3 from "../../public/imgs/elden-ring-key-feature-3.jpeg";
+import keyFeature3 from "../../public/imgs/elden-ring-key-feature-3.jpeg";
 import imgMain from "../../public/imgs/Elden_Ring_Multi2.webp";
 
 function KeyFeatures() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   // const { height, width } = useWindowDimensions();
   return (
     <div className="flex w-full flex-wrap">
@@ -65,12 +64,14 @@ function KeyFeatures() {
               className="mx-auto aspect-[0.72832] w-full max-w-[335px] bg-cover bg-center bg-no-repeat"
               style={{
                 maskImage: `url("../../public/icons/key feature mask.svg")`,
-                backgroundImage: `url(${imgMain})`,
+                // backgroundImage: `url(${imgMain})`,
                 maskSize: "100%",
                 maskRepeat: "no-repeat",
                 maskPosition: "center center",
               }}
-            />
+            >
+              <img src={keyFeature3} alt="key-feature" />
+            </div>
           </div>
           <div className="mr-0 flex max-w-[397px] flex-col justify-center pt-[46px] lg:mr-[118px] lg:pt-0 xl:max-w-[451px]">
             <div className="third-title">Genre-defining gameplay</div>
