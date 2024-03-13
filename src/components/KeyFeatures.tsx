@@ -65,14 +65,12 @@ function KeyFeatures() {
               className="mx-auto aspect-[0.72832] w-full max-w-[335px] bg-cover bg-center bg-no-repeat"
               style={{
                 maskImage: `url(${keyFeatureMask})`,
-                // backgroundImage: `url(${imgMain})`,
+                backgroundImage: `url(${keyFeature3})`,
                 maskSize: "100%",
                 maskRepeat: "no-repeat",
                 maskPosition: "center center",
               }}
-            >
-              <img src={keyFeature3} alt="key-feature" />
-            </div>
+            />
           </div>
           <div className="mr-0 flex max-w-[397px] flex-col justify-center pt-[46px] lg:mr-[118px] lg:pt-0 xl:max-w-[451px]">
             <div className="third-title">Genre-defining gameplay</div>
