@@ -66,8 +66,8 @@ function KeyFeatures() {
               className="mx-auto aspect-[0.72832] w-full max-w-[335px] bg-cover bg-center bg-no-repeat"
               style={{
                 backgroundImage: `url(${keyFeature3})`,
-                maskImage: `url(${keyFeatureMask})`,
                 maskSize: "100%",
+                maskImage: `url(${keyFeatureMask})`,
                 maskRepeat: "no-repeat",
                 maskPosition: "center center",
               }}
@@ -81,8 +81,7 @@ function KeyFeatures() {
               weapons, magical abilities, and skills found throughout the world.
               Charge into battle, pick off enemies one-by-one using stealth, or
               even call upon allies for aid. Many options are at your disposal
-              as you decide how to approach exploration and combat.
-              ${keyFeatureMask}
+              as you decide how to approach exploration and combat. $
             </p>
           </div>
         </div>

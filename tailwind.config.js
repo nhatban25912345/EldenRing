@@ -7,9 +7,9 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'key-feature-mask': "url('public/icons/key feature mask.svg')",
-      }
+      // backgroundImage: {
+      //   'key-feature-mask': "url('public/icons/key-feature-mask.svg')",
+      // }
     },
     screens: {
       sm: '576px',
