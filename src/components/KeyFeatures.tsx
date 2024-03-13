@@ -1,7 +1,7 @@
 // import useWindowDimensions from "../Hooks/useWindowDimensions ";
 // import AnimationGallery from "./AnimationGallery";
 import keyFeature2 from "../../public/imgs/elden-ring-key-feature-2.jpeg";
-import keyFeature3 from "../../public/imgs/elden-ring-key-feature-4.jpeg";
+// import keyFeature3 from "../../public/imgs/elden-ring-key-feature-3.jpeg";
 import imgMain from "../../public/imgs/Elden_Ring_Multi2.webp";
 
 function KeyFeatures() {
@@ -65,7 +65,7 @@ function KeyFeatures() {
               className="mx-auto aspect-[0.72832] w-full max-w-[335px] bg-cover bg-center bg-no-repeat"
               style={{
                 maskImage: `url("../../public/icons/key feature mask.svg")`,
-                backgroundImage: `url(${keyFeature3})`,
+                backgroundImage: `url(${imgMain})`,
                 maskSize: "100%",
                 maskRepeat: "no-repeat",
                 maskPosition: "center center",
