@@ -1,7 +1,7 @@
 // import useWindowDimensions from "../Hooks/useWindowDimensions ";
 // import AnimationGallery from "./AnimationGallery";
 import keyFeature2 from "../../public/imgs/elden-ring-key-feature-2.jpeg";
-import keyFeature3 from "../../public/imgs/elden-ring-key-feature-3.jpeg";
+import keyFeature3 from "../../public/imgs/elden-ring-key-feature-4.jpeg";
 import imgMain from "../../public/imgs/Elden_Ring_Multi2.webp";
 
 function KeyFeatures() {
